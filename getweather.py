@@ -34,7 +34,7 @@ class WeatherClient(object):
         self.api_key = apikey
 
 
-    def hourly(self, location):
+    def hourly(self, location="Lleida"):
         """
         Accesses weatherunderground hourly information for the given location
         """
@@ -45,7 +45,7 @@ class WeatherClient(object):
         jsondata = json.loads(r.text)
         return jsondata["hourly_forecast"]
 
-    def almanac(self, location):
+    def almanac(self, location="Lleida"):
         """
         Accesses wunderground almanac information for the given location
         """
@@ -57,9 +57,12 @@ class WeatherClient(object):
         return jsondata["almanac"]
 
 
-def print_hourly(hourly_prediction, interval):
-    #current = hourly_prediction[0]
-    #hour = int(current["FCTTIME"]["hour"])
+def print_hourly(hourly_prediction, interval=1):
+    """
+    Prints for a given interval the hourly forecast
+    """
+    rain = 0
+    temp = 0
     for i in range(0, interval):
         print "-------------------------------------------------------"
         print "Forecast for %s" % (hourly_prediction[i]["FCTTIME"]["pretty"])
@@ -69,6 +72,29 @@ def print_hourly(hourly_prediction, interval):
         print "Wind speed: %s Km/h" % (hourly_prediction[i]["wspd"]["metric"])
         print "Wind direccion: %s degrees, direction: %s" % (hourly_prediction[i]["wdir"]["degrees"], hourly_prediction[i]["wdir"]["dir"])
         print "Humidity: %s %%" % (hourly_prediction[i]["humidity"])
+        print ""
+        print "Clothing advise:"
+
+        rain = rain + int(hourly_prediction[i]["fctcode"])
+        temp = temp + int(hourly_prediction[i]["temp"]["metric"])
+
+    avgrain = rain / interval
+    avgtemp = temp / interval
+
+    if 10 <= avgrain <= 12:
+        print "Think about bringing an unbrella"
+
+    if 13 <= avgrain <= 15:
+        print "IT'S RAINING MAN. HALLELUJAH!!!!"
+
+    if avgtemp >= 25:
+        print "It's going to be a hot day. It's time to wear summer clothes"
+
+    if 15 < avgtemp < 25:
+        print "It's going to be a cold day. Think about bring a jacket"
+
+    if avgtemp < 15:
+        print "It's going to be a typical winter day. It's time to wear winter clothes"
 
     print "-------------------------------------------------------"
 
@@ -96,7 +122,13 @@ if __name__ == "__main__":
         except IndexError:
             print "Must provide api key in code or cmdline arg"
 
-    weatherclient = WeatherClient(api_key)
-    print_hourly(weatherclient.hourly("Lleida"), 3)
+    location = raw_input("Enter location: ")
 
-    #print_almanac(weatherclient.almanac("San_Francisco"))
+    try:
+        interval = int(raw_input("Enter a time interval for the weather forecast: "))
+    except ValueError:
+        print "Not a number"
+        sys.exit()
+
+    weatherclient = WeatherClient(api_key)
+    print_hourly(weatherclient.hourly(location), interval)
