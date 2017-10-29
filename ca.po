@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-29 01:57+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: getweather.py:72
+msgid "Forecast for"
+msgstr "Predicció per"
+
+#: getweather.py:73
+msgid "Condition:"
+msgstr "Condició:"
+
+#: getweather.py:74
+msgid "Temperature:"
+msgstr "Temperatura"
+
+#: getweather.py:74 getweather.py:75
+msgid "C"
+msgstr "C"
+
+#: getweather.py:75
+msgid "Thermal sensation:"
+msgstr "Sensació tèrmica:"
+
+#: getweather.py:76
+msgid "Wind speed:"
+msgstr "Velocitat del vent:"
+
+#: getweather.py:76
+msgid "Km/h"
+msgstr "Km/h"
+
+#: getweather.py:77
+msgid "Wind direccion:"
+msgstr "Direcció del vent:"
+
+#: getweather.py:77
+msgid "degrees, direction:"
+msgstr "graus, direcció:"
+
+#: getweather.py:78
+msgid "Humidity:"
+msgstr "Humitat:"
+
+#: getweather.py:78
+msgid "%"
+msgstr "%"
+
+#: getweather.py:80
+msgid "Clothing advise:"
+msgstr "Consells per a vestir:"
+
+#: getweather.py:89
+msgid "Think about bringing an unbrella"
+msgstr "Pensa en agafar el para-sol"
+
+#: getweather.py:92
+msgid "IT'S RAINING MAN. HALLELUJAH!!!!"
+msgstr "IT'S RAINING MAN. HALLELUJAH!!!!"
+
+#: getweather.py:95
+msgid "It's going to be a hot day. It's time to wear summer clothes"
+msgstr "Avui serà un dia calurós. És el moment per portar roba d'estiu"
+
+#: getweather.py:98
+msgid "It's going to be a cold day. Think about bring a jacket"
+msgstr "Avui serà un dia fred. Pensa en agafar una jaqueta"
+
+#: getweather.py:101
+msgid "It's going to be frosty. It's time to wear winter clothes"
+msgstr "Avui serà un dia molt fred. És el moment per portar roba d'hivern"
+
+#: getweather.py:110
+msgid "High Temperatures:"
+msgstr "Temperatures altes:"
+
+#: getweather.py:111
+msgid "Average on this date:"
+msgstr "Mitjana en aquesta data:"
+
+#: getweather.py:112 getweather.py:115
+msgid "Maximum on this date:"
+msgstr "Màxima en aquesta data:"
+
+#: getweather.py:112 getweather.py:115
+msgid "("
+msgstr "("
+
+#: getweather.py:112 getweather.py:115
+msgid ")"
+msgstr ")"
+
+#: getweather.py:113
+msgid "Low Temperatures:"
+msgstr "Temperatures baixes:"
+
+#: getweather.py:115 getweather.py:115
+msgid "Minumum on this date:"
+msgstr "Mínima en aquesta data:"
+
+#: getweather.py:129
+msgid "Must provide api key in code or cmdline arg"
+msgstr "Has d'introduir una clau api en el codi o per la linia de comandes"
+
+#: getweather.py:131
+msgid "Enter location: "
+msgstr "Escriu la població: "
+
+#: getweather.py:134
+msgid "Enter a time interval for the weather forecast: "
+msgstr "Entra un interval de temps per a la predicció: "
+
+#: getweather.py:136
+msgid "Not a number"
+msgstr "No és un número"
