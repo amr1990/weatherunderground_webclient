@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-29 01:57+0200\n"
+"POT-Creation-Date: 2017-10-29 02:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -89,12 +89,12 @@ msgstr ""
 msgid "High Temperatures:"
 msgstr ""
 
-#: getweather.py:111
+#: getweather.py:111 getweather.py:114
 msgid "Average on this date:"
 msgstr ""
 
-#: getweather.py:112 getweather.py:115
-msgid "Record on this date"
+#: getweather.py:112
+msgid "Maximum on this date:"
 msgstr ""
 
 #: getweather.py:112 getweather.py:115
@@ -109,8 +109,8 @@ msgstr ""
 msgid "Low Temperatures:"
 msgstr ""
 
-#: getweather.py:114
-msgid "Average on this date"
+#: getweather.py:115
+msgid "Minumum on this date:"
 msgstr ""
 
 #: getweather.py:129
