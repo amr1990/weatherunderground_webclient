@@ -76,8 +76,6 @@ def print_hourly(hourly_prediction, interval):
         print _("Wind speed:"), str(hourly_prediction[i]["wspd"]["metric"]), _("Km/h")
         print _("Wind direccion:"), str(hourly_prediction[i]["wdir"]["degrees"]), _("degrees, direction:"), str(hourly_prediction[i]["wdir"]["dir"])
         print _("Humidity:"), str(hourly_prediction[i]["humidity"]), _("%")
-        print ""
-        print _("Clothing advise:")
 
         rain = rain + int(hourly_prediction[i]["fctcode"])
         temp = temp + int(hourly_prediction[i]["temp"]["metric"])
@@ -85,6 +83,9 @@ def print_hourly(hourly_prediction, interval):
     avgrain = rain / interval
     avgtemp = temp / interval
 
+    print ""
+    print _("Clothing advise:")
+    
     if 10 <= avgrain <= 12:
         print _("Think about bringing an unbrella")
 
