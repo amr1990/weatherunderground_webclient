@@ -127,6 +127,7 @@ if __name__ == "__main__":
             api_key = sys.argv[1]
         except IndexError:
             print _("Must provide api key in code or cmdline arg")
+            sys.exit()
 
     location = raw_input(_("Enter location: "))
 
